@@ -6,6 +6,7 @@ Release:	2
 License:	LGPL
 Group:		Libraries
 Source0:	http://dl.sourceforge.net/zipios/%{name}-%{version}.tar.gz
+# Source0-md5:	da66383f6dd70b4766252fec3ff3d7bb
 Patch0:		%{name}-shared.patch
 Patch1:		%{name}-c++.patch
 URL:		http://zipios.sourceforge.net/
