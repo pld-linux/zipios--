@@ -27,7 +27,7 @@ regular directories and zip files is also provided.
 %description -l pl
 Zipios++ jest jak java.util.zip bibliotek± C++ do odczytywania oraz
 zapisywania plików Zip. Dostêp do pojedyñczych wpisów jest mo¿liwy
-poprzed standardowe strumienie we/wy C++. Prosty wirtualny system
+poprzez standardowe strumienie we/wy C++. Prosty wirtualny system
 plików (tylko do odczytu) montuj±cy regularne katalogi oraz pliki zip
 równie¿ jest dostarczany.
 
