@@ -7,12 +7,12 @@ License:	LGPL
 Group:		Libraries
 Source0:	http://prdownloads.sourceforge.net/zipios/%{name}-%{version}.tar.gz
 Patch0:		%{name}-shared.patch
+URL:		http://zipios.sourceforge.net/
 BuildRequires:	zlib-devel
 BuildRequires:	libstdc++-devel
 BuildRequires:	automake
 BuildRequires:	autoconf
 BuildRequires:	libtool
-URL:		http://zipios.sourceforge.net/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -61,6 +61,7 @@ Biblioteki statyczne zipios++.
 %patch0 -p1
 
 %build
+rm -f missing
 libtoolize --copy --force
 aclocal
 autoconf
