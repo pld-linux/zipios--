@@ -2,18 +2,19 @@ Summary:	C++ library for reading and writing Zip files
 Summary(pl):	Biblioteka C++ do odczytu i zapisu plików Zip
 Name:		zipios++
 Version:	0.1.5
-Release:	2
+Release:	3
 License:	LGPL
 Group:		Libraries
 Source0:	http://dl.sourceforge.net/zipios/%{name}-%{version}.tar.gz
 # Source0-md5:	da66383f6dd70b4766252fec3ff3d7bb
 Patch0:		%{name}-shared.patch
 Patch1:		%{name}-c++.patch
+Patch2:		%{name}-gcc.patch
 URL:		http://zipios.sourceforge.net/
 BuildRequires:	automake
 BuildRequires:	autoconf
 BuildRequires:	libstdc++-devel
-BuildRequires:	libtool
+BuildRequires:	libtool >= 2:1.4d
 BuildRequires:	zlib-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -34,7 +35,7 @@ równie¿ jest dostarczany.
 Summary:	Header files for zipios++
 Summary(pl):	Pliki nag³ówkowe zipios++
 Group:		Development/Libraries
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{version}-%{release}
 Requires:	libstdc++-devel
 Requires:	zlib-devel
 
@@ -50,7 +51,7 @@ programistów u¿ywaj±cych bibliotek zipios++.
 Summary:	Static zipios++ libraries
 Summary(pl):	Biblioteki statyczne zipios++
 Group:		Development/Libraries
-Requires:	%{name}-devel = %{version}
+Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static zipios++ libraries.
@@ -62,12 +63,13 @@ Biblioteki statyczne zipios++.
 %setup -q
 %patch0 -p1
 %patch1 -p1
+%patch2 -p1
 
 %build
-rm -f missing
 %{__libtoolize}
 %{__aclocal}
 %{__autoconf}
+%{__autoheader}
 %{__automake}
 %configure
 %{__make}
@@ -92,6 +94,7 @@ rm -rf $RPM_BUILD_ROOT
 %files devel
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/lib*.so
+%{_libdir}/lib*.la
 %{_includedir}/zipios++
 
 %files static
