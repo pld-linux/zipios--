@@ -5,14 +5,14 @@ Version:	0.1.5
 Release:	1
 License:	LGPL
 Group:		Libraries
-Source0:	http://prdownloads.sourceforge.net/zipios/%{name}-%{version}.tar.gz
+Source0:	http://dl.sourceforge.net/zipios/%{name}-%{version}.tar.gz
 Patch0:		%{name}-shared.patch
 URL:		http://zipios.sourceforge.net/
-BuildRequires:	zlib-devel
-BuildRequires:	libstdc++-devel
 BuildRequires:	automake
 BuildRequires:	autoconf
+BuildRequires:	libstdc++-devel
 BuildRequires:	libtool
+BuildRequires:	zlib-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -33,8 +33,8 @@ Summary:	Header files for zipios++
 Summary(pl):	Pliki nag³ówkowe zipios++
 Group:		Development/Libraries
 Requires:	%{name} = %{version}
-Requires:	zlib-devel
 Requires:	libstdc++-devel
+Requires:	zlib-devel
 
 %description devel
 The header files are only needed for development of programs using the
@@ -75,12 +75,11 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
+%clean
+rm -rf $RPM_BUILD_ROOT
 
 %post   -p /sbin/ldconfig
 %postun -p /sbin/ldconfig
-
-%clean
-rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
