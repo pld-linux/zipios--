@@ -1,0 +1,38 @@
+diff -urN zipios++-0.1.5.org/configure.in zipios++-0.1.5/configure.in
+--- zipios++-0.1.5.org/configure.in	Sat Apr 20 13:48:16 2002
++++ zipios++-0.1.5/configure.in	Sat Apr 20 13:49:59 2002
+@@ -28,7 +28,7 @@
+ AC_PROG_CC
+ AC_PROG_CPP
+ AC_PROG_INSTALL
+-AC_PROG_RANLIB
++AC_PROG_LIBTOOL
+ 
+ dnl Checks for libraries.
+ AC_CHECK_LIB(z, inflate, [cv_libz=yes], [cv_libz=no])
+diff -urN zipios++-0.1.5.org/src/Makefile.am zipios++-0.1.5/src/Makefile.am
+--- zipios++-0.1.5.org/src/Makefile.am	Sat Apr 20 13:48:16 2002
++++ zipios++-0.1.5/src/Makefile.am	Sat Apr 20 13:59:09 2002
+@@ -5,11 +5,11 @@
+ 
+ INCLUDES = -I..
+ 
+-lib_LIBRARIES = libzipios.a
++lib_LTLIBRARIES = libzipios.la
+ 
+ noinst_PROGRAMS = appendzip
+ 
+-libzipios_a_SOURCES = backbuffer.h                \
++libzipios_la_SOURCES = backbuffer.h                \
+                       basicentry.cpp              \
+                       collcoll.cpp                \
+                       dircoll.cpp                 \
+@@ -32,6 +32,7 @@
+                       deflateoutputstreambuf.cpp  \
+                       zipoutputstreambuf.cpp      \
+                       zipoutputstream.cpp
+-
++libzipios_la_LIBADD = \
++		     -lz
+ 
+ appendzip_SOURCES = appendzip.cpp
