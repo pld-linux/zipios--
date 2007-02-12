@@ -1,5 +1,5 @@
 Summary:	C++ library for reading and writing Zip files
-Summary(pl):	Biblioteka C++ do odczytu i zapisu plików Zip
+Summary(pl.UTF-8):   Biblioteka C++ do odczytu i zapisu plikÃ³w Zip
 Name:		zipios++
 Version:	0.1.5
 Release:	3
@@ -25,16 +25,16 @@ Zip files. Access to individual entries is provided through standard
 C++ iostreams. A simple read-only virtual file system that mounts
 regular directories and zip files is also provided.
 
-%description -l pl
-Zipios++ jest jak java.util.zip bibliotek± C++ do odczytywania oraz
-zapisywania plików Zip. Dostêp do pojedyñczych wpisów jest mo¿liwy
+%description -l pl.UTF-8
+Zipios++ jest jak java.util.zip bibliotekÄ… C++ do odczytywania oraz
+zapisywania plikÃ³w Zip. DostÄ™p do pojedyÅ„czych wpisÃ³w jest moÅ¼liwy
 poprzez standardowe strumienie we/wy C++. Prosty wirtualny system
-plików (tylko do odczytu) montuj±cy regularne katalogi oraz pliki zip
-równie¿ jest dostarczany.
+plikÃ³w (tylko do odczytu) montujÄ…cy regularne katalogi oraz pliki zip
+rÃ³wnieÅ¼ jest dostarczany.
 
 %package devel
 Summary:	Header files for zipios++
-Summary(pl):	Pliki nag³ówkowe zipios++
+Summary(pl.UTF-8):   Pliki nagÅ‚Ã³wkowe zipios++
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	libstdc++-devel
@@ -44,20 +44,20 @@ Requires:	zlib-devel
 The header files are only needed for development of programs using the
 zipios++.
 
-%description devel -l pl
-W pakiecie tym znajduj± siê pliki nag³ówkowe, przeznaczone dla
-programistów u¿ywaj±cych bibliotek zipios++.
+%description devel -l pl.UTF-8
+W pakiecie tym znajdujÄ… siÄ™ pliki nagÅ‚Ã³wkowe, przeznaczone dla
+programistÃ³w uÅ¼ywajÄ…cych bibliotek zipios++.
 
 %package static
 Summary:	Static zipios++ libraries
-Summary(pl):	Biblioteki statyczne zipios++
+Summary(pl.UTF-8):   Biblioteki statyczne zipios++
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static zipios++ libraries.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Biblioteki statyczne zipios++.
 
 %prep
