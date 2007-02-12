@@ -1,5 +1,5 @@
 Summary:	C++ library for reading and writing Zip files
-Summary(pl.UTF-8):   Biblioteka C++ do odczytu i zapisu plików Zip
+Summary(pl.UTF-8):	Biblioteka C++ do odczytu i zapisu plików Zip
 Name:		zipios++
 Version:	0.1.5
 Release:	3
@@ -34,7 +34,7 @@ również jest dostarczany.
 
 %package devel
 Summary:	Header files for zipios++
-Summary(pl.UTF-8):   Pliki nagłówkowe zipios++
+Summary(pl.UTF-8):	Pliki nagłówkowe zipios++
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	libstdc++-devel
@@ -50,7 +50,7 @@ programistów używających bibliotek zipios++.
 
 %package static
 Summary:	Static zipios++ libraries
-Summary(pl.UTF-8):   Biblioteki statyczne zipios++
+Summary(pl.UTF-8):	Biblioteki statyczne zipios++
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
