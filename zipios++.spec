@@ -11,6 +11,7 @@ Patch0:		%{name}-shared.patch
 Patch1:		%{name}-c++.patch
 Patch2:		%{name}-gcc.patch
 Patch3:		%{name}-gcc42.patch
+Patch4:		gcc43.patch
 URL:		http://zipios.sourceforge.net/
 BuildRequires:	automake
 BuildRequires:	autoconf
@@ -66,6 +67,7 @@ Biblioteki statyczne zipios++.
 %patch1 -p1
 %patch2 -p1
 %patch3 -p1
+%patch4 -p1
 
 %build
 %{__libtoolize}

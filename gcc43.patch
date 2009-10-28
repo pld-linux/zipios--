@@ -1,0 +1,20 @@
+--- zipios++-0.1.5/src/appendzip.cpp.orig	2009-10-28 21:12:58.458644084 +0100
++++ zipios++-0.1.5/src/appendzip.cpp	2009-10-28 21:13:09.957853771 +0100
+@@ -4,6 +4,7 @@
+ 
+ #include "zipios++/ziphead.h"
+ #include "zipios++/zipheadio.h"
++#include <cstdlib>
+ 
+ using namespace std ;
+ using namespace zipios ;
+--- zipios++-0.1.5/tests/test_simplesmartptr.cpp.orig	2009-10-28 21:59:58.264845223 +0100
++++ zipios++-0.1.5/tests/test_simplesmartptr.cpp	2009-10-28 22:01:20.259209938 +0100
+@@ -8,6 +8,7 @@
+ #include "zipios++/simplesmartptr.h"
+ 
+ #include <cassert>
++#include <memory>
+ 
+ using namespace zipios ;
+ 
