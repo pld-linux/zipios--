@@ -95,15 +95,15 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog NEWS README
-%attr(755,root,root) %{_libdir}/*.so.*.*
-%attr(755,root,root) %ghost %{_libdir}/*.so.0
+%attr(755,root,root) %{_libdir}/libzipios.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libzipios.so.0
 
 %files devel
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/lib*.so
-%{_libdir}/lib*.la
+%attr(755,root,root) %{_libdir}/libzipios.so
+%{_libdir}/libzipios.la
 %{_includedir}/zipios++
 
 %files static
 %defattr(644,root,root,755)
-%{_libdir}/lib*.a
+%{_libdir}/libzipios.a
