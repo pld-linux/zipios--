@@ -2,7 +2,7 @@ Summary:	C++ library for reading and writing Zip files
 Summary(pl.UTF-8):	Biblioteka C++ do odczytu i zapisu plików Zip
 Name:		zipios++
 Version:	0.1.5
-Release:	5
+Release:	6
 License:	LGPL
 Group:		Libraries
 Source0:	http://downloads.sourceforge.net/zipios/%{name}-%{version}.tar.gz
